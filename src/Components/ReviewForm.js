@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 export default function ReviewForm(props) {
 const { id } = useParams();
 const {reviewDetails} = props
-const [reveiw, setReview] = useState({
+const [review, setReview] = useState({
     reviewer: "",
     title: "",
     content: "",
@@ -13,7 +13,7 @@ const [reveiw, setReview] = useState({
 })
 
 const handleTextChange = (event) => {
-    setReview({...reviews, [event.target.id]: event.target.value})
+    setReview({...review, [event.target.id]: event.target.value})
 }
 
 useEffect(() => {
